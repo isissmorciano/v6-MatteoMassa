@@ -43,12 +43,13 @@ def create_category(nome):
     db.commit()
     return cursor
 
-def get_categories_stats():
-   db= get_db()
-   query= """
-        SELECT nome
-        COUNT(p.id),
-        SUM(prezzo)
-        
-                   """
+#def get_categories_stats():
+ #  db= get_db()
+  # query= """
+   #     SELECT nome
+    #    COUNT(p.id),
+     #   SUM(prezzo),
+      #  AVR(prezzo)
+
+       #            """
     
