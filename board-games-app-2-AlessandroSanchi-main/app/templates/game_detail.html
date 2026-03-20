@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<article>
+    <header>
+        <h1>{{ game['nome'] }}</h1>
+        
+    
+        <h2>Categoria: {{ game['categoria']}}</h2>
+    </header>
+</article>
+
+<body>
+    <a href="{{ url_for('main.get_prodotto', id=game['id']) }}">Partite</a>
+    <a href="{{ url_for('main.prodotto_create', id = game['id']) }}">Crea Partita</a>
+</body>
+<hr>
+<a href="{{ url_for('main.index') }}">Torna ai giochi</a>
+{% endblock %}
